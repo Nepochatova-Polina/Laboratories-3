@@ -1,47 +1,89 @@
 #ifndef LABORATORIES_3_MAIN_H
 #define LABORATORIES_3_MAIN_H
 
-#include "cstring"
+#include "string"
 
 using namespace std;
-struct Node {
-    int value, indexX, indexY;
-    Node *next, *prev;
-};
 
-class List {
-    Node *head, *tail;
+
+class BookHero {
 public:
-    List() : head(nullptr), tail(nullptr) {};
-
-    void Add(int x, int y, int z);
-
-    void findBySecondIndex(int num);
-
-    void findByFirstIndex(int num);
-
-    void findByValue(int num);
-
-    static void multiOfMAtrix(Node *firstList, Node *secondList);
-
-    static void sumOfMAtrix(Node *firstList, Node *secondList);
-
-    static void readFile(List firstList, List secondList);
-
-
-};
-
-
-struct BookHero{
     string heroName;
-    string status;
+    int status{};
+    BookHero *next{};
 };
 
+
+//List Of Heroes
+struct listForHeroes {
+    BookHero head;
+    listForHeroes *next{};
+};
+class ListOfHeroes {
+    listForHeroes *Head;
+public:
+    ListOfHeroes() { Head = nullptr; }
+    void Add(BookHero *el);
+
+};
+void ListOfHeroes::Add(BookHero *el) {
+    auto *temp = new listForHeroes;
+    temp->head = *el;
+    temp->next = Head;
+    Head = temp;
+}
 class Book {
-    string bookName, author, annotation;
-    int releaseDate, numOfPage;
-    Book *next, *prev;
-    BookHero *newHero;
+
+public:
+    string bookName, author, releaseDate, annotation, mainHero;
+    int numOfPage{};
+    Book *next{};
+    ListOfHeroes *Hero{};
+
+    static void mainFunc();
 
 };
+
+//List Of Books
+struct listForBooks {
+    Book head;
+    listForBooks *next{};
+};
+class ListOfBooks {
+    static listForBooks *Head;
+public:
+    ListOfBooks() { Head = nullptr; }
+    static void sortBySeries( BookHero *first, BookHero *fifth,  BookHero *eighth);
+    static void Add(Book *el);
+    void sortByData( );
+};
+void ListOfBooks::Add(Book *el) {
+    auto *temp = new listForBooks;
+    temp->head = *el;
+    temp->next = Head;
+    Head = temp;
+}
+//List Of Lists
+struct ListForLists {
+    BookHero hero;
+    ListOfBooks *head{};
+    ListForLists *next{};
+
+};
+class ListOfLists {
+    ListForLists *Head;
+public:
+    ListOfLists() { Head = nullptr; }
+    void Add(ListOfBooks *el, BookHero *hero);
+};
+void ListOfLists::Add(ListOfBooks *el, BookHero *hero) {
+    auto *temp = new ListForLists;
+    temp->hero = *hero;
+    temp->head = el;
+    temp->next = Head;
+    Head = temp;
+}
+
+
+
 #endif //LAB1_LISTFUNCTIONS_H
