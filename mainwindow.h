@@ -1,43 +1,31 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-#include<QTimeEdit>
-#include <QMainWindow>
 
-namespace Ui {
-class MainWindow;
-}
+#include <QMainWindow>
+#include<QTimeEdit>
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
-
+    void on_Add_pb_clicked();
     void UpdateTime();
-    void ShowCurTime();
-    void compare();
-
-    void on_pbStart1_clicked();
-    void on_pbStop1_clicked();
-    void on_pbStart2_clicked();
-    void on_pbStop2_clicked();
-
-
-
-    void on_actionStartAll_changed();
-    void on_actionStop_All_changed();
 
 private:
     Ui::MainWindow *ui;
-
-    QTimer *timer_1s;
-    QTimer *timer_2s;
-    QTimeEdit *timeEdit;
+     QTimer *timer_1s;
+     QTime *timer;
+     QTimeEdit *timeEdit;
 };
-
-
 #endif // MAINWINDOW_H
+
+
+
