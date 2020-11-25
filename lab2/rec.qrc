@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/rec">
+        <file>pic/check.png</file>
+        <file>pic/allDone.png</file>
+        <file>pic/deleteAll1.png</file>
+        <file>pic/deleteOne.png</file>
+        <file>pic/help.png</file>
+        <file>pic/Иконки Печать.png</file>
+        <file>pic/showDone.png</file>
+    </qresource>
+</RCC>
