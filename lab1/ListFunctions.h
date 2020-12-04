@@ -1,3 +1,4 @@
+
 #ifndef LABORATORIES_3_MAIN_H
 #define LABORATORIES_3_MAIN_H
 

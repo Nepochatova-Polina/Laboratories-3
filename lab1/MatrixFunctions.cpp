@@ -1,6 +1,5 @@
-#include "MatrixFunction.h"
 #include "iostream"
-#include "listFunctions.h"
+#include "MatrixFunctions.h"
 #include "fstream"
 
 using namespace std;
@@ -144,7 +143,5 @@ void multiMAtrixOnVector(Node *List, int arr[]) {
 
 //Список 2. Задание 10
 
-void func(){
-    Book book;
 
-}
+

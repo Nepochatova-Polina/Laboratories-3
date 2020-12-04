@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>540</width>
+    <height>417</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>261</width>
+      <height>291</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>90</y>
+      <width>161</width>
+      <height>81</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>29</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add New Note</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Add_pb">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>180</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>10</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>NOTES</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>540</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionHelp"/>
+   <addaction name="actiondeleteAll"/>
+   <addaction name="actionDeleteOne"/>
+   <addaction name="actionDone"/>
+   <addaction name="actionShowDone"/>
+  </widget>
+  <action name="actiondeleteAll">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="rec.qrc">
+     <normaloff>:/rec/pic/deleteAll1.png</normaloff>:/rec/pic/deleteAll1.png</iconset>
+   </property>
+   <property name="text">
+    <string>deleteAll</string>
+   </property>
+  </action>
+  <action name="actionDeleteOne">
+   <property name="icon">
+    <iconset resource="rec.qrc">
+     <normaloff>:/rec/pic/deleteOne.png</normaloff>:/rec/pic/deleteOne.png</iconset>
+   </property>
+   <property name="text">
+    <string>DeleteOne</string>
+   </property>
+  </action>
+  <action name="actionDone">
+   <property name="icon">
+    <iconset resource="rec.qrc">
+     <normaloff>:/rec/pic/allDone.png</normaloff>:/rec/pic/allDone.png</iconset>
+   </property>
+   <property name="text">
+    <string>Done</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset resource="rec.qrc">
+     <normaloff>:/rec/pic/help.png</normaloff>:/rec/pic/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="actionShowDone">
+   <property name="icon">
+    <iconset resource="rec.qrc">
+     <normaloff>:/rec/pic/showDone.png</normaloff>:/rec/pic/showDone.png</iconset>
+   </property>
+   <property name="text">
+    <string>ShowDone</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="rec.qrc"/>
+ </resources>
+ <connections/>
+</ui>

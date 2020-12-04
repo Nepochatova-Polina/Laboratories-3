@@ -110,5 +110,3 @@ void ListOfBooks::sortByData() {
     }
 
 }
-
-
